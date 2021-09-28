@@ -1,0 +1,36 @@
+<div class="imagecontainer">
+  <img src='{{imagePath}}'/>
+</div>
+<style>
+  .imagecontainer{
+    text-align: center;
+    width: 200;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a *ngIf="loginService.isUserLoggedIn()" class="nav-link"routerLink ="tasks" routerLinkActive="active"> Tasks List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a *ngIf="loginService.isUserLoggedIn()" class="nav-link" routerLink ="save" routerLinkActive="active"> AddTask</a>
+                  </li>
+                  <li class="nav-item">
+                    <a *ngIf="!loginService.isUserLoggedIn()" class="nav-link" routerLink ="login" routerLinkActive="active" > login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a *ngIf="loginService.isUserLoggedIn()"class="nav-link" routerLink ="logout" routerLinkActive="active"> logout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a *ngIf="!loginService.isUserLoggedIn()"class="nav-link" routerLink ="users" routerLinkActive="active">Newuser</a>
+                  </li>
+                  <li class="nav-item">
+                    <a *ngIf="loginService.isUserLoggedIn()"class="nav-link" routerLink ="newuser" routerLinkActive="active"> User</a>
+                  </li>
+                </ul>
+        </div>
+</nav>
+
+
+<router-outlet></router-outlet>

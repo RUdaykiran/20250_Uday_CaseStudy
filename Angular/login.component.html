@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="./login.component.css">
+<div class="container">
+  <title>AngularJS Job Tracking System</title>
+  <body style="text-align:center">
+    <form class="loginform">
+      <div>
+        UserName : <input type="text" name="username" [(ngModel)]="username" placeholder="Enter UserName">
+        <br>
+        <br>
+        Password : <input type="password" name="password" [(ngModel)]="password" placeholder="Enter Password">
+      </div>
+      <br>
+      <button (click)=checkLogin() class="btn btn-success">
+        Login
+      </button>
+
+    </form>
+    
+
+  </body>
+    
+    
+  </div>
