@@ -1,0 +1,28 @@
+CREATE TABLE `task` (
+  `task_id` int NOT NULL,
+  `owner_id` int DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `description` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `priority` varchar(45) DEFAULT NULL,
+  `notes` varchar(45) DEFAULT NULL,
+  `is_bookmarked` int DEFAULT NULL,
+  `created_on` datetime DEFAULT NULL,
+  `status_changed_on` datetime DEFAULT NULL,
+  PRIMARY KEY (`task_id`)
+)
+
+
+
+CREATE TABLE `user` (
+  `user_id` bigint NOT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `contact_number` bigint NOT NULL,
+  `role` varchar(10) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `password` varchar(45) NOT NULL,
+  `created_on` date DEFAULT NULL,
+  `is_alive` bit(1) NOT NULL,
+  PRIMARY KEY (`user_id`,`password`)
+) 
